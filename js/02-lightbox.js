@@ -14,7 +14,8 @@ function createGalleryItem({ preview, original, description }) {
   }
 
   let lightbox = new SimpleLightbox('.gallery-js a', {
-    overlayOpacity: 0.5,
+    captionDelay: 250,
+    captionsData: 'alt',
     navText:['⬅️','➡️'],
     closeText: '❎'
 });

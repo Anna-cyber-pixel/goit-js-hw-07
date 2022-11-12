@@ -5,7 +5,6 @@ const galleryContainer = document.querySelector(".gallery-js");
 const galleryMarkup = createGalleryItems(galleryItems);
 galleryContainer.insertAdjacentHTML("beforeend", galleryMarkup);
 galleryContainer.addEventListener("click", clickOnImg);
-let modalWindow;
 console.log(galleryItems);
 
 function createGalleryItems(galleryItems) {

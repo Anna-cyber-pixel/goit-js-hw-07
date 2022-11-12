@@ -35,9 +35,14 @@ function clickOnImg(e) {
   <img src="${e.target.dataset.source}" alt="${e.target.alt}" />
  </div>`);
   markup.show();
-  galleryContainer.addEventListener("keydown", (e) => {
+  galleryContainer.addEventListener("keydown", closeImg);
+  function closeImg(e) {
     if (e.code === "Escape") {
       markup.close();
+      removeEvent();
     }
-  });
+  };
+  function removeEvent() {
+    galleryContainer.removeEventListener("keydown", closeImg);
+  };
 }
